@@ -17,10 +17,8 @@ with open('assets/xy.bib') as bibtex_file:
 
 pd.set_option('display.max_colwidth', 98)
 
-df = pd.DataFrame(bib_database.entries)
-df = df.sort_values(by='author').reset_index()
+df = pd.DataFrame(bib_database.entries).sort_values(by=['author','year', 'title']).reset_index()
 df.index += 1
-df['year'] = pd.to_numeric(df['year'], errors='coerce')
 sorted_df = df.sort_values(by='year', ascending=False)
 display(sorted_df[['title', 'year']])
 ```
