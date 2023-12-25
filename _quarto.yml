@@ -7,13 +7,18 @@ website:
     left:
       - text: about
         href: index.qmd
-        icon: incognito
+        icon: person
       - text: publications
         icon: book
         href: publications.qmd
       - text: blog
         icon: cup-hot
         href: https://xiaochuany.github.io/1principle/
+      - text: talks
+        icon: mic
+        menu: 
+          - text: boundary effects in stochastic geometry
+            url: https://xiaochuany.github.io/slides/
     tools:
       - href: https://www.linkedin.com/in/xiaochuan-yang-088975188/
         icon: linkedin
