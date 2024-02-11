@@ -1,1 +1,1 @@
-Sitemap: https://github.com/xiaochuany/omega/sitemap.xml
+Sitemap: https://xiaochuany.github.io/omega/sitemap.xml
