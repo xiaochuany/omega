@@ -26,7 +26,8 @@ website:
         icon: github
       - href: https://www.youtube.com/@xiaochuanyang
         icon: youtube
-    
+      - href: https://twitter.com/xiaochuandev
+        icon: twitter
     
 format:
   html:
