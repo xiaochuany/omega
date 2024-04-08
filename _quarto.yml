@@ -18,7 +18,7 @@ website:
         icon: mic
         menu: 
           - text: boundary effects in stochastic geometry
-            url: https://xiaochuany.github.io/slides/
+            url: https://xiaochuany.github.io/polytopes-slides/
     tools:
       - href: https://www.linkedin.com/in/xiaochuan-yang-088975188/
         icon: linkedin
