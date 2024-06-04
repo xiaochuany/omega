@@ -10,15 +10,18 @@ csl: assets/etri-journal.csl
 ```{python}
 #| echo: false
 import bibtexparser
-import pandas as pd
+import polars as pl
 
-with open('assets/xy.bib') as bibtex_file:
-    bib_database = bibtexparser.load(bibtex_file)
+with open('assets/xy.bib') as f:
+    bib_database = bibtexparser.load(f)
 
-pd.set_option('display.max_colwidth', 98)
+query = (
+  pl.LazyFrame(bib_database.entries)
+  .sort(by=['year', "author", 'title'], descending = [True, False, False])
+  .select(pl.col("year").cast(pl.Int32), "title")
+  )
 
-df = pd.DataFrame(bib_database.entries).sort_values(by=['author','year', 'title']).reset_index()
-df.index += 1
-sorted_df = df.sort_values(by='year', ascending=False)
-display(sorted_df[['title', 'year']])
+with pl.Config(tbl_rows=100, tbl_hide_dataframe_shape=True,tbl_hide_column_data_types=True):
+  display(query.collect())
+  
 ```
