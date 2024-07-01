@@ -6,6 +6,7 @@ nocite: |
 csl: assets/etri-journal.csl
 ---
 
+All papers are availalbe digitally in [Google Scholar](https://scholar.google.com/citations?user=oxnamocAAAAJ&hl=en). 
 
 ```{python}
 #| echo: false
